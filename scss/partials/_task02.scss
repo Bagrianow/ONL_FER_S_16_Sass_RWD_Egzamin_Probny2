@@ -14,7 +14,7 @@ $colors: (
   $colors-list: map.values($colors);
 
   @for $i from 1 through list.length($colors-list) {
-    .el#{$i} {
+    .el-#{$i} {
       background-color: list.nth($colors-list, $i);
       height: 200px;
       flex-grow: 1;
