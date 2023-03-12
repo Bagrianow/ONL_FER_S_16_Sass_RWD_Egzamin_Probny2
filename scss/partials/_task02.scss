@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "sass:list";
+
+$colors: (
+        c: #f9c00c,
+        cc: #00b9f1,
+        ccc: #7200da,
+        cccc: #f9320c,
+        ccccc: #75D701
+);
+
+.task-02 {
+    display: flex;
+  $colors-list: map.values($colors);
+
+  @for $i from 1 through list.length($colors-list) {
+    .el#{$i} {
+      background-color: list.nth($colors-list, $i);
+      height: 200px;
+      flex-grow: 1;
+    }
+  }
+};
